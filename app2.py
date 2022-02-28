@@ -55,9 +55,11 @@ st.write(values)
 st.write('---')
 
 # loaded_model = pickle.load(open(model.pkl, 'rb'))
-with open('model.pkl' , 'rb') as f:
-    lr = pickle.load(f)
-prediction = lr.predict(values)
+# with open('model.pkl' , 'rb') as f:
+#     lr = pickle.load(f)
+pickled_model = pickle.load(open('model.pkl', 'rb'))
+
+prediction = pickled_model.predict(values)
 
 st.header('Prediction Result')
 st.write(prediction)
