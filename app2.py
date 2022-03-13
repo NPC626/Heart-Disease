@@ -97,7 +97,6 @@ def user_input_features():
     return features
 
 values = user_input_features()
-values.dtypes
 st.header('Specified Input parameters')
 st.write(values)
 st.write('---')
